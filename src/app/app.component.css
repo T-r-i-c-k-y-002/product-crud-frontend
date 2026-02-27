@@ -1,6 +1,7 @@
 .parent-container {
   width: 100%;
-  min-height: calc(100vh - 90px);
+  /* min-height: calc(100vh - 90px); */
+  height: 96vh;
   display: flex;
   align-items: center;
   justify-content: center;
