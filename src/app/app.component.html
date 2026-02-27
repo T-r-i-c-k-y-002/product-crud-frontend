@@ -1,0 +1,49 @@
+<div class="parent-container">
+  <div class="container">
+    <h2>Product Manager</h2>
+
+    <div class="form-section">
+      <input type="text" placeholder="Product Name" [(ngModel)]="product.name">
+
+      <input type="number" placeholder="Price" [(ngModel)]="product.price">
+
+      <input type="number" placeholder="Quantity" [(ngModel)]="product.quantity">
+
+      <button *ngIf="!editMode" (click)="addProduct()">Add Product</button>
+      <button *ngIf="editMode" (click)="updateProduct()">Update Product</button>
+    </div>
+
+    <hr>
+
+    <div class="table-container">
+      <table>
+        <thead style="position: sticky; top: 0; z-index: 100;">
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let item of products">
+            <td>{{ item.name }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>
+              <div style="display: flex;gap: 5px;align-items: center;justify-content: center;">
+                <button (click)="editProduct(item)">Edit</button>
+                <button (click)="deleteProduct(item._id)">Delete</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- <router-outlet /> -->
