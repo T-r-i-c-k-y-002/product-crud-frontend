@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(90deg, #f0eaea, #09c7e944);
 }
 
 .container {
