@@ -27,7 +27,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.getProducts();
-    this.productService.checkingMethod();
+    this.productService.checkingMethod().subscribe((res) => {
+      console.log("=========== RESPONSE OF CHECKING METHOD ==========", res);
+    });
   }
 
   getProducts() {
