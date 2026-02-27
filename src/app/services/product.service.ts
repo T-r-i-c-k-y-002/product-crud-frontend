@@ -15,6 +15,10 @@ export class ProductService {
     return this.http.get(this.apiUrl);
   }
 
+  checkingMethod() {
+    return this.http.get(`${this.apiUrl}/checking`);
+  }
+
   addProduct(data: any) {
     return this.http.post(this.apiUrl, data);
   }

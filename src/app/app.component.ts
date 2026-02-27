@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.getProducts();
+    this.productService.checkingMethod();
   }
 
   getProducts() {
